@@ -34,32 +34,46 @@ const CONFIG = {
   }
 };
 
-// YouTube API Integration
 class YouTubeAPI {
     constructor() {
         this.apiKey = CONFIG.youtube.apiKey;
         this.channelId = CONFIG.youtube.channelId;
-        this.maxResults = CONFIG.youtube.maxVideos;
+        this.maxResults = CONFIG.youtube.maxVideos || 200;
         this.baseUrl = 'https://www.googleapis.com/youtube/v3';
     }
 
-    async fetchLatestVideos() {
+    // Step 1: Get the Uploads Playlist ID
+    async getUploadsPlaylistId() {
         try {
             const response = await fetch(
-                `${this.baseUrl}/search?key=${this.apiKey}&channelId=${this.channelId}&part=snippet,id&order=date&maxResults=${this.maxResults}&type=video`
+                `${this.baseUrl}/channels?part=contentDetails&id=${this.channelId}&key=${this.apiKey}`
             );
-            
-            if (!response.ok) {
-                throw new Error('Failed to fetch videos');
-            }
-            
+            const data = await response.json();
+            return data.items[0].contentDetails.relatedPlaylists.uploads;
+        } catch (error) {
+            console.error('Error fetching uploads playlist ID:', error);
+            return null;
+        }
+    }
+
+    // Step 2: Fetch videos from the Uploads Playlist
+    async fetchAllVideos() {
+        try {
+            const uploadsPlaylistId = await this.getUploadsPlaylistId();
+            if (!uploadsPlaylistId) return [];
+
+            const response = await fetch(
+                `${this.baseUrl}/playlistItems?part=snippet&playlistId=${uploadsPlaylistId}&maxResults=${this.maxResults}&key=${this.apiKey}`
+            );
             const data = await response.json();
             return data.items;
         } catch (error) {
-            console.error('Error fetching YouTube videos:', error);
+            console.error('Error fetching uploaded videos:', error);
             return [];
         }
     }
+}
+
 
     renderVideos(videos) {
         const container = document.getElementById('videos-container');
