@@ -185,7 +185,7 @@ function generateHTML(config) {
     </main>
 
     <footer>
-        <p>&copy; 2024 ${config.creatorName}. All rights reserved.</p>
+        <p>&copy; 2025 ${config.creatorName}. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
