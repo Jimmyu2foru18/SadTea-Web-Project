@@ -14,13 +14,7 @@ This project is a personal website for a content creator. It serves as a central
 
 ## ✅ Core Features
 
-
-| Feature                | Description                                                                 |
-|----------------------- |-----------------------------------------------------------------------------|
-| 🎬 YouTube Embed       | Fetch and embed latest uploads automatically from your channel              |
-| 👕 Merchandise         | Show off merch via links or embed widgets (e.g., Teespring, Shopify)        |
-| 📱 Social Media Links  | Easy access to your Instagram, Twitter, TikTok, etc.                        |
-=======
+|-----------------------|-----------------------------------------------------------------------------|
 | Feature               | Description                                                                 |
 |-----------------------|-----------------------------------------------------------------------------|
 | 🎬 YouTube Embed      | Fetch and embed latest uploads automatically from your channel              |
@@ -28,7 +22,7 @@ This project is a personal website for a content creator. It serves as a central
 | 📱 Social Media Links | Easy access to your Instagram, Twitter, TikTok, etc.                        |
 | 📬 Contact Form        | Static-site compatible form using Formspree or EmailJS                     |
 | 🌐 Free Hosting        | Deployed on GitHub Pages with optional custom domain                       |
-
+|-----------------------|-----------------------------------------------------------------------------|
 ---
 
 ## 🧰 Tech Stack
