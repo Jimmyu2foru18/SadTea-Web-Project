@@ -14,7 +14,7 @@ This project is a personal website for a content creator. It serves as a central
 
 ## ✅ Core Features
 
-<<<<<<< HEAD
+
 | Feature                | Description                                                                 |
 |----------------------- |-----------------------------------------------------------------------------|
 | 🎬 YouTube Embed       | Fetch and embed latest uploads automatically from your channel              |
@@ -24,11 +24,10 @@ This project is a personal website for a content creator. It serves as a central
 | Feature               | Description                                                                 |
 |-----------------------|-----------------------------------------------------------------------------|
 | 🎬 YouTube Embed      | Fetch and embed latest uploads automatically from your channel              |
-| 👕 Merchandise         | Show off merch via links or embed widgets (e.g., Teespring, Shopify)         |
+| 👕 Merchandise         | Show off merch via links or embed widgets (e.g., Teespring, Shopify)       |
 | 📱 Social Media Links | Easy access to your Instagram, Twitter, TikTok, etc.                        |
->>>>>>> 88e635bf02d8249556988f3164529e6470fb8af6
-| 📬 Contact Form        | Static-site compatible form using Formspree or EmailJS                      |
-| 🌐 Free Hosting        | Deployed on GitHub Pages with optional custom domain                        |
+| 📬 Contact Form        | Static-site compatible form using Formspree or EmailJS                     |
+| 🌐 Free Hosting        | Deployed on GitHub Pages with optional custom domain                       |
 
 ---
 
@@ -198,13 +197,3 @@ You can connect a custom domain (e.g., `yourname.com`):
 - Add animations with libraries like AOS.js or GSAP
 
 ---
-
-## ✍️ Credits
-
-Built and maintained by **[Your Name]**
-
----
-
-## 📄 License
-
-This project is open-source and available under the [MIT License](LICENSE).
