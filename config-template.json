@@ -1,0 +1,34 @@
+{
+  "creatorName": "Your Name",
+  "websiteTitle": "Your Creator Website",
+  "description": "Your description goes here - tell your audience what you create and what they can expect!",
+  "youtube": {
+    "apiKey": "YOUR_YOUTUBE_API_KEY_HERE",
+    "channelId": "YOUR_CHANNEL_ID_HERE",
+    "channelUrl": "https://youtube.com/@yourchannel",
+    "maxVideos": "6"
+  },
+  "socialMedia": {
+    "instagram": "https://instagram.com/yourhandle",
+    "twitter": "https://twitter.com/yourhandle",
+    "tiktok": "https://tiktok.com/@yourhandle",
+    "discord": "https://discord.gg/yourserver",
+    "twitch": "https://twitch.tv/yourhandle",
+    "facebook": "https://facebook.com/yourpage"
+  },
+  "merchandise": {
+    "platform": "custom",
+    "url": "https://your-store-url.com",
+    "embedCode": ""
+  },
+  "contactForm": {
+    "service": "formspree",
+    "endpoint": "YOUR_FORMSPREE_ID_HERE",
+    "email": "your-email@example.com"
+  },
+  "theme": {
+    "primaryColor": "#ff6b6b",
+    "secondaryColor": "#4ecdc4",
+    "backgroundColor": "#f8f9fa"
+  }
+}
