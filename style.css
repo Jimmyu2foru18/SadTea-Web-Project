@@ -598,6 +598,37 @@ section {
     100% { transform: rotate(360deg); }
 }
 
+/* No Content Styling */
+.no-content {
+    text-align: center;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    border: 1px solid rgba(0, 255, 136, 0.2);
+    margin: 2rem 0;
+}
+
+.no-content p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+}
+
+.no-content .subtitle {
+    font-size: 0.9rem;
+    opacity: 0.6;
+}
+
+.no-content a {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.no-content a:hover {
+    color: var(--accent-color);
+    text-shadow: 0 0 10px var(--accent-color);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-menu {
