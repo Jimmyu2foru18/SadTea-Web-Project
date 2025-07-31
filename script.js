@@ -8,7 +8,7 @@ const CONFIG = {
         maxPlaylists: 6,
         showLiveVideos: true,
         maxLiveVideos: 66
-    },
+    }, 
     streaming: {
         twitch: {
             enabled: true,
