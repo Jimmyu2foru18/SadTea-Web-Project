@@ -1,7 +1,7 @@
 // Configuration from config.json
 const CONFIG = {
     youtube: {
-        apiKey: 'AIzaSyBfWEUDtIAfJLp7nLqYvNh5Ra2FbowYJI8',
+        apiKey: 'AIzaSyDUrAtpTT3ezacpPosd4XFhVxWf0VGyKwY',
         channelId: 'UCQjpnt3fOWSyN6JbTkDcPZQ',
         maxVideos: 100,
         showPlaylists: true,
