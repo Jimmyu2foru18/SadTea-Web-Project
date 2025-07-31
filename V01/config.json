@@ -1,0 +1,34 @@
+{
+  "creatorName": "Th3viousGameus",
+  "websiteTitle": "Th3vious Website",
+  "description": "This is a website for my content",
+  "youtube": {
+    "apiKey": "AIzaSyBfWEUDtIAfJLp7nLqYvNh5Ra2FbowYJI8",
+    "channelId": "UCQjpnt3fOWSyN6JbTkDcPZQ",
+    "channelUrl": "https://www.youtube.com/@th3viousgameus",
+    "maxVideos": "55"
+  },
+  "socialMedia": {
+    "instagram": "https://www.instagram.com/jimmyu2foru18",
+    "twitter": "https://x.com/th3viousgameus",
+    "tiktok": "https://www.tiktok.com/@th3viousgameus?lang=en",
+    "discord": "https://discord.gg/cq792Zsb6C",
+    "twitch": "https://www.twitch.tv/jimmyu2foru18",
+    "facebook": "https://www.facebook.com/jimmyu2foru18"
+  },
+  "merchandise": {
+    "platform": "none",
+    "url": "",
+    "embedCode": ""
+  },
+  "contactForm": {
+    "service": "jimmymcguigan18@gmail.com",
+    "endpoint": "",
+    "email": "jimmymcguigan18@gmail.com"
+  },
+  "theme": {
+    "primaryColor": "#0000FF",
+    "secondaryColor": "#FFFFFF",
+    "backgroundColor": "#1E88E5"
+  }
+}

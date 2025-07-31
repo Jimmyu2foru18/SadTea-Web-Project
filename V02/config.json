@@ -1,0 +1,48 @@
+{
+  "creatorName": "Th3vious",
+  "websiteTitle": "Th3viousGameus",
+  "description": "Welcome to my Page",
+  "youtube": {
+    "apiKey": "AIzaSyBfWEUDtIAfJLp7nLqYvNh5Ra2FbowYJI8",
+    "channelId": "UCQjpnt3fOWSyN6JbTkDcPZQ",
+    "maxVideos": 100,
+    "showPlaylists": true,
+    "maxPlaylists": 8
+  },
+  "socialMedia": {
+    "youtube": "https://www.youtube.com/@th3viousgameus",
+    "instagram": "https://www.instagram.com/jimmyu2foru18",
+    "twitter": "https://x.com/th3viousgameus",
+    "tiktok": "https://www.tiktok.com/@th3viousgameus?lang=en",
+    "discord": "https://discord.gg/cq792Zsb6C",
+    "twitch": "https://www.twitch.tv/jimmyu2foru18",
+    "facebook": "https://www.facebook.com/jimmyu2foru18",
+    "linkedin": ""
+  },
+  "merchandise": {
+    "enabled": false,
+    "platform": "none",
+    "url": "",
+    "embedCode": ""
+  },
+  "contactForm": {
+    "enabled": false,
+    "service": "none",
+    "email": ""
+  },
+  "theme": {
+    "fonts": {
+      "primary": "Nunito",
+      "secondary": "Mukti",
+      "googleFonts": "Nunito:wght@300;400;500;600;700;800|Mukti:wght@300;400;600;700"
+    },
+    "style": "gaming",
+    "primaryColor": "#00ff88",
+    "secondaryColor": "#00ccff",
+    "backgroundColor": "#0a0a0a",
+    "textColor": "#ffffff",
+    "accentColor": "#ff0066"
+  },
+  "copyright": "© 2025 Th3vious. All rights reserved.",
+  "showCredit": false
+}
