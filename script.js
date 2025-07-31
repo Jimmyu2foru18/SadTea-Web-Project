@@ -8,7 +8,7 @@ const CONFIG = {
         maxPlaylists: 6,
         showLiveVideos: true,
         maxLiveVideos: 66
-    }, 
+    },
     streaming: {
         twitch: {
             enabled: true,
@@ -94,7 +94,8 @@ class YouTubeAPI {
 
     async fetchLiveVideos(maxResults = 10) {
         try {
-            const data = await this.makeRequest('search', {
+            // First try to get live streams
+            let data = await this.makeRequest('search', {
                 part: 'snippet',
                 channelId: this.channelId,
                 maxResults: maxResults,
@@ -102,7 +103,40 @@ class YouTubeAPI {
                 type: 'video',
                 eventType: 'live'
             });
-            return data.items || [];
+            
+            let liveVideos = data.items || [];
+            
+            // If no live videos, try upcoming streams
+            if (liveVideos.length === 0) {
+                data = await this.makeRequest('search', {
+                    part: 'snippet',
+                    channelId: this.channelId,
+                    maxResults: maxResults,
+                    order: 'date',
+                    type: 'video',
+                    eventType: 'upcoming'
+                });
+                liveVideos = data.items || [];
+            }
+            
+            // If still no results, get recent videos and check their live status
+            if (liveVideos.length === 0) {
+                const recentVideos = await this.makeRequest('search', {
+                    part: 'snippet',
+                    channelId: this.channelId,
+                    maxResults: 50,
+                    order: 'date',
+                    type: 'video'
+                });
+                
+                // Filter for videos that might be live streams
+                liveVideos = (recentVideos.items || []).filter(video => {
+                    const title = video.snippet.title.toLowerCase();
+                    return title.includes('live') || title.includes('stream') || title.includes('🔴');
+                }).slice(0, maxResults);
+            }
+            
+            return liveVideos;
         } catch (error) {
             console.error('Error fetching live videos:', error);
             return [];
@@ -184,7 +218,12 @@ class YouTubeAPI {
         if (!container) return;
 
         if (videos.length === 0) {
-            container.innerHTML = '<p class="no-content">No live videos found.</p>';
+            container.innerHTML = `
+                <div class="no-content">
+                    <p>🔴 No live streams currently active</p>
+                    <p class="subtitle">Check back later or visit the <a href="https://www.youtube.com/@th3viousgameus/streams" target="_blank">streams page</a> directly!</p>
+                </div>
+            `;
             return;
         }
 
@@ -394,6 +433,25 @@ function showMessage(message, type = 'info') {
     }, 5000);
 }
 
+// Function to fix Twitch embeds for local file access
+function fixTwitchEmbeds() {
+    const twitchIframes = document.querySelectorAll('iframe[src*="twitch.tv"]');
+    twitchIframes.forEach(iframe => {
+        const currentSrc = iframe.src;
+        const currentDomain = window.location.hostname || 'localhost';
+        
+        // Add current domain to parent parameters if not already present
+        if (!currentSrc.includes(`parent=${currentDomain}`) && currentDomain !== 'localhost') {
+            iframe.src = currentSrc + `&parent=${currentDomain}`;
+        }
+        
+        // Handle file:// protocol
+        if (window.location.protocol === 'file:') {
+            iframe.src = currentSrc.replace('&parent=file', '') + '&parent=file';
+        }
+    });
+}
+
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', async () => {
     try {
@@ -450,6 +508,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         // Initialize smooth scrolling
         new SmoothScroll();
+        
+        // Fix Twitch embeds for local file access
+        fixTwitchEmbeds();
         
     } catch (error) {
         console.error('Initialization error:', error);
