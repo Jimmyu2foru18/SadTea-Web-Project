@@ -1,0 +1,61 @@
+{
+  "creatorName": "Th3vious",
+  "websiteTitle": "Th3vious",
+  "description": "Th3vious",
+  "youtube": {
+    "apiKey": "AIzaSyDUrAtpTT3ezacpPosd4XFhVxWf0VGyKwY",
+    "channelId": "UCQjpnt3fOWSyN6JbTkDcPZQ",
+    "maxVideos": 6,
+    "showPlaylists": false,
+    "maxPlaylists": 0,
+    "showLiveVideos": true,
+    "maxLiveVideos": 3
+  },
+  "streaming": {
+    "twitch": {
+      "enabled": true,
+      "username": "jimmyu2foru18",
+      "showChat": true
+    }
+  },
+  "socialMedia": {
+    "youtube": "https://www.youtube.com/@th3viousgameus",
+    "instagram": "",
+    "twitter": "",
+    "tiktok": "",
+    "discord": "",
+    "twitch": "https://www.twitch.tv/jimmyu2foru18",
+    "facebook": "",
+    "linkedin": "",
+    "kick": "https://kick.com/th3viousgameus"
+  },
+  "merchandise": {
+    "enabled": true,
+    "platform": "custom",
+    "url": "https://kick.com/th3viousgameus",
+    "embedCode": ""
+  },
+  "contactForm": {
+    "enabled": false,
+    "service": "none",
+    "email": ""
+  },
+  "theme": {
+    "fonts": {
+      "primary": "Poppins",
+      "secondary": "Open Sans",
+      "googleFonts": "Poppins:wght@300;400;500;600;700|Open+Sans:wght@300;400;600;700"
+    },
+    "style": "vibrant",
+    "primaryColor": "#e74c3c",
+    "secondaryColor": "#27ae60",
+    "backgroundColor": "#ffffff",
+    "textColor": "#2c3e50",
+    "accentColor": "#f39c12",
+    "headingColor": "#2c3e50",
+    "bodyTextColor": "#2c3e50",
+    "linkColor": "#e74c3c"
+  },
+  "copyright": "© 2025 Th3vious. All rights reserved.",
+  "showCredit": true
+}
