@@ -3,13 +3,13 @@
   "websiteTitle": "Th3viousGameus",
   "description": "Welcome to my Page",
   "youtube": {
-    "apiKey": "AIzaSyBfWEUDtIAfJLp7nLqYvNh5Ra2FbowYJI8",
+    "apiKey": "AIzaSyDUrAtpTT3ezacpPosd4XFhVxWf0VGyKwY",
     "channelId": "UCQjpnt3fOWSyN6JbTkDcPZQ",
-    "maxVideos": 100,
+    "maxVideos": 10,
     "showPlaylists": true,
-    "maxPlaylists": 6,
+    "maxPlaylists": 3,
     "showLiveVideos": true,
-    "maxLiveVideos": 66
+    "maxLiveVideos": 10
   },
   "streaming": {
     "twitch": {
