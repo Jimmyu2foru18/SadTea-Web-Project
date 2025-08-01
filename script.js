@@ -3,11 +3,11 @@ const CONFIG = {
     youtube: {
         apiKey: 'AIzaSyDUrAtpTT3ezacpPosd4XFhVxWf0VGyKwY',
         channelId: 'UCQjpnt3fOWSyN6JbTkDcPZQ',
-        maxVideos: 100,
+        maxVideos: 10,
         showPlaylists: true,
-        maxPlaylists: 6,
+        maxPlaylists: 3,
         showLiveVideos: true,
-        maxLiveVideos: 66
+        maxLiveVideos: 10
     },
     streaming: {
         twitch: {
