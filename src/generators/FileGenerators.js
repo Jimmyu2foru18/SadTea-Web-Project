@@ -147,9 +147,9 @@ class FileGenerators {
     <div class="container">
       <h2 class="section-title">Live Stream</h2>
       <div class="twitch-container">
-        <div class="twitch-player" style="width: ${streamWidth};">
+             <div class="twitch-player" style="width: ${streamWidth};">
           <iframe
-            src="https://player.twitch.tv/?channel=${streaming.twitch.username}&parent=${location.hostname}&autoplay=false&muted=false"
+            src="https://player.twitch.tv/?channel=${streaming.twitch.username}&parent=localhost&parent=website-builder-beta-p2erapudh-jimmyu2foru18s-projects.vercel.app&autoplay=false&muted=false"
             height="400"
             width="550"
             allowfullscreen="true"
@@ -160,7 +160,7 @@ class FileGenerators {
         ${streaming.twitch.showChat ? `
         <div class="twitch-chat" style="width: ${chatWidth};">
           <iframe
-            src="https://www.twitch.tv/embed/${streaming.twitch.username}/chat?parent=${location.hostname}"
+            src="https://www.twitch.tv/embed/${streaming.twitch.username}/chat?parent=localhost&parent=website-builder-beta-p2erapudh-jimmyu2foru18s-projects.vercel.app"
             height="400"
             width="200"
             frameborder="0"
