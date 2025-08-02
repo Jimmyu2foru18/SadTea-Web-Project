@@ -142,14 +142,15 @@ class FileGenerators {
     const chatWidth = streaming.twitch.showChat ? '40%' : '100%';
     const streamWidth = streaming.twitch.showChat ? '60%' : '100%';
     
-  return `
+return `
   <section id="twitch-stream" class="twitch-section">
     <div class="container">
       <h2 class="section-title">Live Stream</h2>
       <div class="twitch-container">
-             <div class="twitch-player" style="width: ${streamWidth};">
+        <div class="twitch-player" style="width: ${streamWidth};">
           <iframe
-            src="https://player.twitch.tv/?channel=${streaming.twitch.username}&parent=localhost&parent=127.0.0.1&parent=github.io&parent=pages.dev&parent=netlify.app&parent=vercel.app&parent=file&autoplay=false&muted=false"
+            id="twitch-player-iframe"
+            data-channel="${streaming.twitch.username}"
             height="400"
             width="550"
             allowfullscreen="true"
@@ -160,7 +161,8 @@ class FileGenerators {
         ${streaming.twitch.showChat ? `
         <div class="twitch-chat" style="width: ${chatWidth};">
           <iframe
-            src="https://www.twitch.tv/embed/${streaming.twitch.username}/chat?parent=localhost&parent=127.0.0.1&parent=github.io&parent=pages.dev&parent=netlify.app&parent=vercel.app&parent=file"
+            id="twitch-chat-iframe"
+            data-channel="${streaming.twitch.username}"
             height="400"
             width="200"
             frameborder="0"
@@ -169,14 +171,56 @@ class FileGenerators {
         </div>` : ''}
       </div>
       <div class="twitch-info">
-        <p>Watch live on 
-          <a href="https://twitch.tv/${streaming.twitch.username}" target="_blank" rel="noopener noreferrer">
-            Twitch
-          </a>
-        </p>
+        <p>Watch live on <a href="https://twitch.tv/${streaming.twitch.username}" target="_blank" rel="noopener noreferrer">Twitch</a></p>
       </div>
     </div>
-  </section>`;
+  </section>
+  <script>
+    // Set Twitch iframe sources with current hostname
+    document.addEventListener('DOMContentLoaded', function() {
+      const protocol = window.location.protocol;
+      let hostname = window.location.hostname || 'localhost';
+      
+      // Handle file:// protocol for local development
+      if (protocol === 'file:') {
+        hostname = 'localhost';
+        // Show message for file protocol
+        const twitchContainer = document.querySelector('.twitch-container');
+        if (twitchContainer) {
+          twitchContainer.innerHTML = \`
+            <div style="text-align: center; padding: 2rem; background: rgba(138, 43, 226, 0.1); border-radius: 12px; margin: 1rem 0;">
+              <h3 style="color: #8a2be2; margin-bottom: 1rem;">🎮 Twitch Stream</h3>
+              <p style="margin-bottom: 1.5rem; color: #666;">Twitch embeds require a web server to function properly.</p>
+              <p style="margin-bottom: 1.5rem;">To view the live stream and chat:</p>
+              <a href="https://twitch.tv/\${document.getElementById('twitch-player-iframe').getAttribute('data-channel')}" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 style="display: inline-block; background: #9146ff; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;"
+                 onmouseover="this.style.background='#7c3aed'" 
+                 onmouseout="this.style.background='#9146ff'">
+                🎮 Watch on Twitch
+              </a>
+            </div>
+          \`;
+        }
+        return;
+      }
+      
+      const playerIframe = document.getElementById('twitch-player-iframe');
+      const chatIframe = document.getElementById('twitch-chat-iframe');
+      
+      if (playerIframe) {
+        const channel = playerIframe.getAttribute('data-channel');
+        playerIframe.src = \`https://player.twitch.tv/?channel=\${channel}&parent=\${hostname}&autoplay=false&muted=false\`;
+      }
+      
+      if (chatIframe) {
+        const channel = chatIframe.getAttribute('data-channel');
+        chatIframe.src = \`https://www.twitch.tv/embed/\${channel}/chat?parent=\${hostname}\`;
+      }
+    });
+  </script>`;
+
   }
 
   generateLiveVideosSection() {
