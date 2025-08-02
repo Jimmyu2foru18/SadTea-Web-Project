@@ -142,37 +142,37 @@ class FileGenerators {
     const chatWidth = streaming.twitch.showChat ? '40%' : '100%';
     const streamWidth = streaming.twitch.showChat ? '60%' : '100%';
     
-    return `
-        <section id="twitch-stream" class="twitch-section">
-            <div class="container">
-                <h2 class="section-title">Live Stream</h2>
-                <div class="twitch-container">
-                    <div class="twitch-player" style="width: ${streamWidth};">
-                        <iframe
-                            src="https://player.twitch.tv/?channel=${streaming.twitch.username}&parent=localhost&autoplay=false&muted=false"
-                            height="400"
-                            width="550"
-                            allowfullscreen="true"
-                            scrolling="no"
-                            frameborder="0">
-                        </iframe>
-                    </div>
-                    ${streaming.twitch.showChat ? `
-                    <div class="twitch-chat" style="width: ${chatWidth};">
-                        <iframe
-                            src="https://www.twitch.tv/embed/${streaming.twitch.username}/chat?parent=localhost"
-                            height="400"
-                            width="200"
-                            frameborder="0"
-                            scrolling="no">
-                        </iframe>
-                    </div>` : ''}
-                </div>
-                <div class="twitch-info">
-                    <p>Watch live on <a href="https://twitch.tv/${streaming.twitch.username}" target="_blank" rel="noopener noreferrer">Twitch</a></p>
-                </div>
-            </div>
-        </section>`;
+   return `
+  <section id="twitch-stream" class="twitch-section">
+    <div class="container">
+      <h2 class="section-title">Live Stream</h2>
+      <div class="twitch-container">
+        <div class="twitch-player" style="width: ${streamWidth};">
+          <iframe
+            src="https://player.twitch.tv/?channel=${streaming.twitch.username}&parent=${location.hostname}&autoplay=false&muted=false"
+            height="400"
+            width="550"
+            allowfullscreen="true"
+            scrolling="no"
+            frameborder="0">
+          </iframe>
+        </div>
+        ${streaming.twitch.showChat ? `
+        <div class="twitch-chat" style="width: ${chatWidth};">
+          <iframe
+            src="https://www.twitch.tv/embed/${streaming.twitch.username}/chat?parent=${location.hostname}"
+            height="400"
+            width="200"
+            frameborder="0"
+            scrolling="no">
+          </iframe>
+        </div>` : ''}
+      </div>
+      <div class="twitch-info">
+        <p>Watch live on <a href="https://twitch.tv/${streaming.twitch.username}" target="_blank" rel="noopener noreferrer">Twitch</a></p>
+      </div>
+    </div>
+  </section>`;
   }
 
   generateLiveVideosSection() {
