@@ -18,7 +18,7 @@ A powerful, automated website generator designed specifically for YouTube creato
 
 ### Prerequisites
 
-- Node.js (version 14 or higher)
+- Node.js 
 - A YouTube channel
 - (Optional) YouTube Data API key for video integration
 - (Optional) Contact form service accounts (Formspree/EmailJS)
@@ -27,7 +27,6 @@ A powerful, automated website generator designed specifically for YouTube creato
 
 1. **Clone or download this repository**
    ```bash
-   git clone <repository-url>
    cd youtube-creator-website
    ```
 
@@ -243,30 +242,3 @@ Contributions are welcome! Please feel free to submit issues and pull requests.
 3. Make your changes
 4. Test thoroughly
 5. Submit a pull request
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 🆘 Support
-
-If you encounter any issues:
-1. Check the troubleshooting section above
-2. Search existing GitHub issues
-3. Create a new issue with detailed information
-4. Include your `config.json` (remove sensitive data)
-
-## 🎯 Roadmap
-
-- [ ] Additional theme options
-- [ ] More social media platforms
-- [ ] Blog integration
-- [ ] Analytics integration
-- [ ] SEO optimization tools
-- [ ] Multi-language support
-
----
-
-**Built with ❤️ for content creators**
-
-Made by the YouTube Creator Website Builder team. Star ⭐ this repo if it helped you!
