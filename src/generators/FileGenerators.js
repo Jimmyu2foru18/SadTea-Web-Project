@@ -142,7 +142,7 @@ class FileGenerators {
     const chatWidth = streaming.twitch.showChat ? '40%' : '100%';
     const streamWidth = streaming.twitch.showChat ? '60%' : '100%';
     
-   return `
+  return `
   <section id="twitch-stream" class="twitch-section">
     <div class="container">
       <h2 class="section-title">Live Stream</h2>
@@ -169,7 +169,11 @@ class FileGenerators {
         </div>` : ''}
       </div>
       <div class="twitch-info">
-        <p>Watch live on <a href="https://twitch.tv/${streaming.twitch.username}" target="_blank" rel="noopener noreferrer">Twitch</a></p>
+        <p>Watch live on 
+          <a href="https://twitch.tv/${streaming.twitch.username}" target="_blank" rel="noopener noreferrer">
+            Twitch
+          </a>
+        </p>
       </div>
     </div>
   </section>`;
