@@ -1,0 +1,36 @@
+{
+  "name": "personal-creator-website",
+  "version": "2.0.0",
+  "description": "A modular setup system for creating professional creator websites with inheritance-based architecture",
+  "main": "setup.js",
+  "scripts": {
+    "setup": "node setup.js",
+    "start": "node setup.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "website",
+    "creator",
+    "youtube",
+    "setup",
+    "generator",
+    "modular",
+    "inheritance"
+  ],
+  "author": "Personal Creator Website Generator",
+  "license": "MIT",
+  "dependencies": {
+    "y": "^0.3.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jimmyu2foru18/personal-creator-website"
+  },
+  "bugs": {
+    "url": "https://github.com/Jimmyu2foru18/personal-creator-website/issues"
+  },
+  "homepage": "https://github.com/Jimmyu2foru18/personal-creator-website#readme"
+}
