@@ -1,6 +1,7 @@
-# YouTube Creator Website Builder
+# Creator Website Builder
 
-A powerful, automated website generator designed specifically for YouTube creators, streamers, and content creators. Build a professional website with YouTube integration, contact forms, merchandise sections, and more - all through an interactive setup process.
+A automated website generator designed specifically for YouTube creators, streamers, and content creators. 
+Build a professional website with YouTube integration, contact forms, merchandise sections, and more - all through an interactive setup process.
 
 ## ✨ Features
 
@@ -27,7 +28,7 @@ A powerful, automated website generator designed specifically for YouTube creato
 
 1. **Clone or download this repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Jimmyu2foru18/Website-Builder-Beta.git
    cd youtube-creator-website
    ```
 
@@ -55,7 +56,7 @@ A powerful, automated website generator designed specifically for YouTube creato
    - Streaming setup
    - Copyright information
 
-5. **Generate your website**
+5. **Re-Generate your website after changes**
    ```bash
    node regenerate.js
    ```
@@ -268,5 +269,3 @@ If you encounter any issues:
 ---
 
 **Built with ❤️ for content creators**
-
-Made by the YouTube Creator Website Builder team. Star ⭐ this repo if it helped you!
