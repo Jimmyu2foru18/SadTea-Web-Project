@@ -306,6 +306,20 @@ a:hover {
   background: var(--gradient-accent);
   border-radius: 2px;
 }
+/*DBZ Section*/
+.dbz-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #000; 
+  color: #fff;
+}
+
+.dbz-section .container {
+  text-align: center;
+}
+
 
 /* Videos Section */
 .videos-section {
