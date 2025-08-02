@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Personal Creator Website Setup
- * Modular setup system using inheritance and separation of concerns
+ * Modular setup using inheritance and separation of concerns
  */
 
 const SetupOrchestrator = require('./src/SetupOrchestrator');
@@ -22,5 +21,6 @@ async function main() {
 if (require.main === module) {
   main();
 }
+
 
 module.exports = { SetupOrchestrator };
