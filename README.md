@@ -15,6 +15,12 @@ Build a professional website with YouTube integration, contact forms, merchandis
 - **Advanced CSS**: Modern design with animations, gradients, and glassmorphism effects
 - **GitHub Pages Ready**: Automatic deployment configuration included
 
+### ​ Example Video
+
+[![Example Video](https://img.youtube.com/vi/28LIWgqAruM/0.jpg)](https://www.youtube.com/watch?v=28LIWgqAruM&t=9s)
+
+<!-- Click the image above to play the video starting at 0:09 -->
+
 ## 🚀 Quick Start
 
 ### Prerequisites
